@@ -4,7 +4,7 @@ var PerformNextMove = require('./PerformNextMove');
 
 var app = express();
 
-app.get('/info', info);
+app.get('/Info', info);
 app.post('/PerformNextMove', PerformNextMove);
 
 var server = app.listen(8081);

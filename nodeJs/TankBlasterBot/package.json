@@ -7,7 +7,7 @@
   "license": "GPL-2.0",
   "repository" : { 
 	"type" : "git", 
-	"url" : "https://github.com/michalczerwinski/hello_wars"
+	"url" : "https://github.com/bcichonski/hello_wars"
   },
   "dependencies": {
     "express": "*",
