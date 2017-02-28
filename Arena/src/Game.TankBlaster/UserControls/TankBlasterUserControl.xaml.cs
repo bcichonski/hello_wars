@@ -160,7 +160,9 @@ namespace Game.TankBlaster.UserControls
                     MaxWidth = _tileSize * 0.75,
                     MaxHeight = _tileSize * 0.75,
                     FontSize = _tileSize * 0.6,
-                    FontWeight = FontWeights.SemiBold
+                    Margin = new Thickness(_tileSize*0.3,0,0,0),
+                    FontWeight = FontWeights.SemiBold,
+                    Foreground = Brushes.Gold                
                 };
                 BoardGrid.AddElement(elementToAdd, bomb.Location.X, bomb.Location.Y);
                 BoardGrid.AddElement(textToAdd, bomb.Location.X, bomb.Location.Y);
