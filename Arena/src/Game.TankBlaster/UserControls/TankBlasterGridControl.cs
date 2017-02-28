@@ -25,6 +25,17 @@ namespace Game.TankBlaster.UserControls
             
             element.SetValue(ColumnProperty, x);
             element.SetValue(RowProperty, y);
+
+            if (element is FrameworkElement)
+            {
+                var elementWithTooltip = (FrameworkElement) element;
+                elementWithTooltip.ToolTip = new ToolTip()
+                {
+                    Content = new Point(x, y),
+                    ContentStringFormat = "({0})"
+                };
+            }
+            
             Children.Add(element);
         }
     }
