@@ -181,7 +181,7 @@ namespace Game.TankBlaster.Services
 
             return new RoundPartialHistory
             {
-                Caption = string.Format("Round {0} {1}: {2}", roundNumber, bot.Name, actionDescription),
+                Caption = string.Format("Round {0} {1} at ({2}): {3}", roundNumber, bot.Name, bot.Location, actionDescription),
                 BoardState = _field.ExportState()
             };
         }
