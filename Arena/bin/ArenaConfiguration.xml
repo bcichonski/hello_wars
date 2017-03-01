@@ -19,7 +19,7 @@
 <!--    <Url>http://localhost:53886/AntWarsBot/</Url>-->
 <!--    <Url>http://localhost:53886/AntWarsBot/</Url>-->
 
-    <Url>http://localhost:81/TankBlasterBotVeronica/</Url>
-    <Url>http://5.135.144.66:8080/</Url>
+    <Url>http://localhost:53887/TankBlasterBartqBot/</Url>
+    <Url>http://localhost:53888/TankBlasterBotAdam/</Url>
   </BotUrls>
 </ArenaConfiguration>
