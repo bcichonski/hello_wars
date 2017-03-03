@@ -9,9 +9,9 @@ namespace Common.Helpers
             return JsonConvert.DeserializeObject<T>(jsonString);
         }
 
-        public static string Serialize(object obj)
+        public static string Serialize(object obj, Formatting formatting = Formatting.None)
         {
-            return JsonConvert.SerializeObject(obj);
+            return JsonConvert.SerializeObject(obj, formatting);
         }
     }
 }
