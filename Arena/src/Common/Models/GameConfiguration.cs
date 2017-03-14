@@ -6,5 +6,6 @@ namespace Common.Models
     {
         public string Type { get; set; }
         public int NextMoveDelay { get; set; }
+        public int MoveTimeout { get; set; }
     }
 }

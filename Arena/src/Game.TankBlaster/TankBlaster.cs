@@ -22,6 +22,7 @@ namespace Game.TankBlaster
         private TankBlasterConfig _gameConfig;
         private LocationService _locationService;
         private int _roundNumber;
+        private int _moveTimeout;
 
         public TankBlaster()
         {
@@ -46,12 +47,13 @@ namespace Game.TankBlaster
                 };
             }
 
-            return await _botService.PlayBotMovesAsync(_delayTime, _roundNumber);
+            return await _botService.PlayBotMovesAsync(_delayTime, _roundNumber, _moveTimeout);
         }
 
         public UserControl GetVisualisationUserControl(IConfigurable configurable)
         {
             _delayTime = configurable.NextMoveDelay;
+            _moveTimeout = configurable.MoveTimeout;
             return new TankBlasterUserControl(_field);
         }
 
