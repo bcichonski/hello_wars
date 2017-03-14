@@ -8,6 +8,7 @@
   <GameConfiguration>
     <Type>TankBlaster</Type>
     <NextMoveDelay>150</NextMoveDelay>
+    <MoveTimeout>300</MoveTimeout>
   </GameConfiguration>
   
   <ArenaMessageDuration>2000</ArenaMessageDuration>

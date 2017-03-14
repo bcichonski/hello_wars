@@ -4,5 +4,6 @@
     {
         string Type { get; set; }
         int NextMoveDelay { get; set; }
+        int MoveTimeout { get; set; }
     }
 }

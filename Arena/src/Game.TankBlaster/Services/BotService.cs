@@ -35,7 +35,7 @@ namespace Game.TankBlaster.Services
             return _field.Bots.ToDictionary(bot => bot as ICompetitor, bot => bot.IsDead ? 0.0 : 1.0);
         }
 
-        public async Task<RoundResult> PlayBotMovesAsync(int delayTime, int roundNumber)
+        public async Task<RoundResult> PlayBotMovesAsync(int delayTime, int roundNumber, int moveTimeout)
         {
             var result = new RoundResult()
             {
@@ -51,7 +51,10 @@ namespace Game.TankBlaster.Services
                 try
                 {
                     turnNumber++;
-                    move = await dynaBlasterBot.NextMoveAsync(GetBotBattlefieldInfo(dynaBlasterBot, roundNumber, turnNumber));
+                    dynaBlasterBot.MoveTimeout = moveTimeout;
+                    move = await dynaBlasterBot.NextMoveAsync(
+                        GetBotBattlefieldInfo(dynaBlasterBot, roundNumber, turnNumber)
+                    );
                 }
                 catch (Exception e)
                 {
