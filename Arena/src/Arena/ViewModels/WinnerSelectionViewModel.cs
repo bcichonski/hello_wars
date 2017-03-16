@@ -30,7 +30,6 @@ namespace Arena.ViewModels
         public WinnerSelectionViewModel(IEnumerable<ICompetitor> competitors )
         {
             Competitors = competitors;
-            SelectedWinner = Competitors.First();
         }
     }
 }
