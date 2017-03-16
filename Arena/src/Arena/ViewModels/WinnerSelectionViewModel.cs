@@ -7,12 +7,19 @@ using System.Windows.Input;
 using Arena.Commands;
 using Common.Interfaces;
 using Common.Utilities;
+using Common.Models;
 
 namespace Arena.ViewModels
 {
     public class WinnerSelectionViewModel : BindableBase
     {
         private ICompetitor _selectedWinner;
+        private static readonly IEnumerable<ICompetitor> defaultOption = new List<ICompetitor>() {
+            new Competitor() {
+                Name = "Nobody wins"
+            }
+        };
+
         private IEnumerable<ICompetitor> _competitors;
 
         public ICompetitor SelectedWinner
@@ -23,7 +30,7 @@ namespace Arena.ViewModels
         }
         public IEnumerable<ICompetitor> Competitors 
         {
-            get { return _competitors; }
+            get { return defaultOption.Concat(_competitors); }
             set { SetProperty(ref _competitors, value); }
         }
 

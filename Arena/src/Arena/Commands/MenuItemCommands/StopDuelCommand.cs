@@ -32,7 +32,8 @@ namespace Arena.Commands.MenuItemCommands
             {
                 var result = new RoundResult()
                 {
-                    FinalResult = competitors.ToDictionary(comp => comp, comp => comp.Id == window.SelectedWinner.Id ? 1.0 : 0.0),
+                    FinalResult = competitors.ToDictionary(comp => comp, comp => (window.SelectedWinner != null 
+                        && comp.Id == window.SelectedWinner.Id) ? 1.0 : 0.0),
                     IsFinished = true
                 };
                 await _viewModel.MakeEndGameConfiguration(result);
