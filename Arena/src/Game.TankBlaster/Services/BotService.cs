@@ -9,6 +9,8 @@ using Common.Models;
 using Game.TankBlaster.Interfaces;
 using Game.TankBlaster.Models;
 using Game.TankBlaster.Properties;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace Game.TankBlaster.Services
 {
@@ -182,11 +184,21 @@ namespace Game.TankBlaster.Services
                 }
             }
 
-            return new RoundPartialHistory
+            var entry = new RoundPartialHistory
             {
                 Caption = string.Format("Round {0} {1} at ({2}): {3}", roundNumber, bot.Name, bot.Location, actionDescription),
                 BoardState = _field.ExportState()
             };
+
+            var logentry = new
+            {
+              Timestamp = DateTime.Now,
+              Event = entry
+            };
+
+            File.AppendAllText("tankblaster.log", JsonHelper.Serialize(logentry,Formatting.Indented)+Environment.NewLine);
+
+            return entry;
         }
     }
 }
