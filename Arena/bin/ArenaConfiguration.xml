@@ -2,25 +2,25 @@
 
 <ArenaConfiguration>
   <EliminationConfiguration>
-    <Type>TournamentLadder</Type>
+    <Type>RoundRobin</Type>
   </EliminationConfiguration>
 
   <GameConfiguration>
     <Type>TankBlaster</Type>
-    <NextMoveDelay>150</NextMoveDelay>
-    <MoveTimeout>300</MoveTimeout>
+    <NextMoveDelay>300</NextMoveDelay>
+	<MoveTimeout>250</MoveTimeout>
   </GameConfiguration>
   
   <ArenaMessageDuration>2000</ArenaMessageDuration>
 
-  <BotUrls>
-        <!--<Url>http://localhost:53886/TicTacToeBot/</Url>
-        <Url>http://localhost:53886/TicTacToeBot/</Url>--> 
-
-<!--    <Url>http://localhost:53886/AntWarsBot/</Url>-->
-<!--    <Url>http://localhost:53886/AntWarsBot/</Url>-->
-
-    <Url>http://localhost:53887/TankBlasterBartqBot/</Url>
-    <Url>http://localhost:53888/TankBlasterBotAdam/</Url>
+  <BotUrls>  
+	<Url>http://localhost:53887/TankBlasterBartqBot/</Url>
+	<Url>http://localhost:53887/TankBlasterBartqBot/</Url>
+	<!--<Url>http://tank.office.sente.pl:35200/Stig/</Url>
+	<Url>http://tank.office.sente.pl:35400/TankBlasterBotKurekq/</Url>
+	<Url>http://tank.office.sente.pl:35500/TankBlasterBotTester/</Url>
+	<Url>http://tank.office.sente.pl:35600/CzolgistaArtur/</Url>
+	<Url>http://tank.office.sente.pl:35100/TankBlasterBartqBot/</Url>
+    <Url>http://tank.office.sente.pl:35300/</Url>-->
   </BotUrls>
 </ArenaConfiguration>
